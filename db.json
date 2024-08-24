@@ -1,0 +1,72 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "aadmin",
+      "password": "admin123"
+    },
+    {
+      "id": "2",
+      "username": "crueda",
+      "password": "password1**"
+    },
+    {
+      "id": "3",
+      "username": "dospina",
+      "password": "123456"
+    },
+    {
+      "id": "4",
+      "username": "dmartinez",
+      "password": "password1****"
+    },
+    {
+      "id": "5",
+      "username": "adavid",
+      "password": "password1*****!"
+    },
+    {
+      "id": "6",
+      "username": "jmartinez",
+      "password": "jm19462.*!"
+    }
+  ],
+  "userDetails": [
+    {
+      "id": "1",
+      "name": "Admin Admin",
+      "email": "admin@pruebatecnica.com",
+      "type": "Administrator"
+    },
+    {
+      "id": "2",
+      "name": "Carlos Rueda",
+      "email": "carlos@pruebatecnica.com",
+      "type": "User"
+    },
+    {
+      "id": "3",
+      "name": "Daniel Ospina",
+      "email": "daniel@pruebatecnica.com",
+      "type": "Administrator"
+    },
+    {
+      "id": "4",
+      "name": "Diana Martinez",
+      "email": "diana@pruebatecnica.com",
+      "type": "User"
+    },
+    {
+      "id": "5",
+      "name": "Andres David",
+      "email": "david@pruebatecnica.com",
+      "type": "User"
+    },
+    {
+      "id": "6",
+      "name": "Julio Martinez",
+      "email": "julio@pruebatecnica.com",
+      "type": "User"
+    }
+  ]
+}
