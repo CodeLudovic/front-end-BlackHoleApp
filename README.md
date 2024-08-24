@@ -38,6 +38,7 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local:
    npm run dev
 
 5. **Filesystem usado en el proyecto**:
+    ```bash
         .
     ├── public                  # Archivos estáticos como imágenes
     ├── src                     # Código fuente de la aplicación
