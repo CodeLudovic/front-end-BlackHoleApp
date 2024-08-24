@@ -30,7 +30,7 @@ function App() {
 	/**
 	 * Estados para manejar la carga inicial, el usuario autenticado, y el estado del sidebar.
 	 */
-	const [loading, setLoading] = useState(true);
+	const [loading, setLoading] = useState(false);
 	const { logout } = useContext(AuthContext);
 	const [user, setUser] = useState({
 		id: "",
