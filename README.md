@@ -1,4 +1,4 @@
-# BlackHoleApp - Prueba Técnica
+# [BlackHoleApp Icon](public/images/blackhole.ico) BlackHoleApp - Prueba Técnica
 
 Este proyecto es una aplicación de administración de usuarios construida con React y Vite. Está diseñado para facilitar la autenticación, el registro y la gestión de usuarios. La aplicación utiliza una API backend para manejar las operaciones de usuario y está optimizada para un rendimiento rápido con Vite.
 
