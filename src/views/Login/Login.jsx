@@ -85,39 +85,38 @@ export const Login = ({ isLoading, setIsLoading }) => {
 			setErrors("Ingresa usuario y contraseña");
 			setIsLoading(false);
 		} else {
-			// Intenta realizar el login llamando a doLogin()
-			await doLogin(_user, _pass)
-				.then((response) => {
-					return response;
-				})
-				.then((result) => {
-					if (Object.keys(result).length > 0) {
-						setErrors("");
-						login(true, result[0]); // Establece el estado de autenticación.
-						navigate("/inicio"); // Redirige al usuario a la página de inicio.
-					} else {
-						Swal.fire({
-							icon: "error",
-							title: "Error al iniciar sesión",
-							text: "Usuario y/o contraseña incorrectos, por favor intente nuevamente.",
-							timer: 2000,
-							showCloseButton: false,
-							showConfirmButton: false,
-							timerProgressBar: true,
-							customClass: {
-								popup: "xxs:width-2/5 md:width-2/5 xs:width-2/5 lg:text-lg",
-								title:
-									"xxs:text-xs md:text-md xs:text-sm xl:text-xl lg:text-lg font-bold text-red-400",
-								icon: "xxs:text-xs md:text-md xs:text-xxs xl:text-lg lg:text-lg text-red-400",
-								htmlContainer:
-									"xs:text-xs md:text-md xxs:text-xs xl:text-xl lg:text-lg",
-								timerProgressBar: "bg-red-400",
-							},
-						});
-						setErrors("Contraseña y/o Usuario Incorrectos");
-					}
-				})
-				.finally(setIsLoading(false));
+			try {
+				const result = await doLogin(_user, _pass);
+				if (result && Object.keys(result).length > 0) {
+					setErrors("");
+					login(true, result[0]); // Establece el estado de autenticación.
+					navigate("/inicio"); // Redirige al usuario a la página de inicio.
+				} else {
+					Swal.fire({
+						icon: "error",
+						title: "Error al iniciar sesión",
+						text: "Usuario y/o contraseña incorrectos, por favor intente nuevamente.",
+						timer: 2000,
+						showCloseButton: false,
+						showConfirmButton: false,
+						timerProgressBar: true,
+						customClass: {
+							popup: "xxs:width-2/5 md:width-2/5 xs:width-2/5 lg:text-lg",
+							title:
+								"xxs:text-xs md:text-md xs:text-sm xl:text-xl lg:text-lg font-bold text-red-400",
+							icon: "xxs:text-xs md:text-md xs:text-xxs xl:text-lg lg:text-lg text-red-400",
+							htmlContainer:
+								"xs:text-xs md:text-md xxs:text-xs xl:text-xl lg:text-lg",
+							timerProgressBar: "bg-red-400",
+						},
+					});
+					setErrors("Contraseña y/o Usuario Incorrectos");
+				}
+			} catch (error) {
+				console.error("Error during login:", error);
+			} finally {
+				setIsLoading(false); // Desactiva el indicador de carga
+			}
 		}
 	};
 
