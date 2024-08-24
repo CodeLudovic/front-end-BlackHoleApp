@@ -148,7 +148,7 @@ export const Login = ({ isLoading, setIsLoading }) => {
 					style={{
 						backgroundImage: "url('/assets/bg-login.webp')",
 					}}>
-					<div className="rounded-xl bg-gray-800 bg-opacity-50 xl:px-10 xl:py-5 shadow-lg backdrop-blur-md py-5 text-xs:px-4">
+					<div className="rounded-xl bg-gray-800 bg-opacity-50 xl:px-10 xl:py-5 shadow-lg backdrop-blur-md py-5 px-4 text-xs:px-4">
 						<div className="flex flex-col items-center justify-center text-white">
 							<div className="mb-8 flex flex-col items-center">
 								<img
