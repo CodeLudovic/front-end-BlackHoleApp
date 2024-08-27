@@ -50,10 +50,10 @@ export const Register = ({ isLoading, setIsLoading }) => {
                 timerProgressBar: true,
                 customClass: {
                     popup: "xxs:width-2/5 md:width-2/5 xs:width-2/5 lg:text-lg",
-                    title: "xxs:text-xs md:text-md xs:text-sm xl:text-xl lg:text-lg font-bold text-red-400",
-                    icon: "xxs:text-xs md:text-md xs:text-xxs xl:text-lg lg:text-lg text-red-400",
+                    title: "xxs:text-xs md:text-md xs:text-sm xl:text-xl lg:text-lg font-bold text-green-400",
+                    icon: "xxs:text-xs md:text-md xs:text-xxs xl:text-lg lg:text-lg text-green-400",
                     htmlContainer: "xs:text-xs md:text-md xxs:text-xs xl:text-xl lg:text-lg",
-                    timerProgressBar: "bg-red-400",
+                    timerProgressBar: "bg-green-400",
                 },
             });
         } else {
